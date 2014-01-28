@@ -8,6 +8,7 @@ package
 	import starling.display.Sprite;
 	import starling.events.Event;
 
+
 	/**
 	 * An example to help you get started with Feathers. Creates a "theme" and
 	 * displays a Button component that you can trigger.
@@ -40,7 +41,8 @@ package
 		protected function addedToStageHandler(event:Event):void
 		{
 			this.removeEventListener(Event.ADDED_TO_STAGE, addedToStageHandler);
-
+			
+			
 			//create the theme. this class will automatically pass skins to any
 			//Feathers component that is added to the stage. components do not
 			//have default skins, so you must always use a theme or skin the
