@@ -28,10 +28,9 @@ package
  
             // Create a Starling instance that will run the "Game" class
             _starling = new Starling(Game, stage);
+			_starling.showStats = true;
             _starling.start();
 			
-			addChild(new Stats());
-
 		}
 		
 		private var _starling:Starling;
