@@ -55,6 +55,8 @@
   <libraryPaths>
     <element path="lib\feathers.swc" />
     <element path="lib\starling.swc" />
+    <element path="lib\nape-dev.swc" />
+    <element path="lib\MetalWorksMobileTheme.swc" />
   </libraryPaths>
   <!-- External Libraries -->
   <externalLibraryPaths>
