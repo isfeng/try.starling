@@ -4,6 +4,7 @@ package
 	import nape.geom.Vec2;
 	import nape.phys.Body;
 	import nape.phys.BodyType;
+	import nape.phys.Material;
 	import nape.shape.Circle;
 	import nape.shape.Polygon;
 	import nape.space.Space;
@@ -45,7 +46,7 @@ package
 			floor.shapes.add(new Polygon(Polygon.rect(50, (h - 50), (w - 100), 1)));
 			floor.space = space;
 			
-			for (var i:int = 0; i < 16; i++)
+			for (var i:int = 0; i < 32; i++)
 			{
 				var box:Body = new Body(BodyType.DYNAMIC);
 				box.shapes.add(new Polygon(Polygon.box(16, 32)));
@@ -58,6 +59,16 @@ package
 			ball.position.setxy(50, h / 2);
 			ball.angularVel = 10;
 			ball.space = space;
+			
+			var anotherCircle:Circle = new Circle(50, new Vec2(0, 0));
+			anotherCircle.material = Material.rubber();
+			
+			var anotherBall:Body = new Body(BodyType.DYNAMIC);
+			anotherBall.shapes.add(anotherCircle);
+			anotherBall.position.setxy(100, h / 4);
+			anotherBall.angularVel = -10;
+			anotherBall.space = space;
+			
 			
 			stage.addEventListener(Event.ENTER_FRAME, enterFrameHandler);
 		}
