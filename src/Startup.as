@@ -18,25 +18,24 @@ package
 	import starling.core.Starling;
 	import starling.events.ResizeEvent;
 	
-	[SWF(width="400",height="300",frameRate="60",backgroundColor="#4a4137")]
-	
+	[SWF(frameRate="60", backgroundColor="#ffffff")]
 	public class Startup extends Sprite
 	{
 		public function Startup()
 		{
-			//stage.scaleMode = StageScaleMode.NO_SCALE;
-			//stage.align = StageAlign.TOP_LEFT;
-			//stage.addEventListener(Event.RESIZE, onResize);
-		
+				
+			stage.align = StageAlign.TOP_LEFT;
+			stage.scaleMode = StageScaleMode.NO_SCALE;
 			Starling.handleLostContext = true;
 			// Create a Starling instance that will run the "Game" class
 			_starling = new Starling(Game, stage);
+			
 			_starling.showStats = true;
 			_starling.start();
 		
 		}
 		
 		private var _starling:Starling;
-
+	
 	}
 }
