@@ -28,7 +28,7 @@ package
 			stage.scaleMode = StageScaleMode.NO_SCALE;
 			Starling.handleLostContext = true;
 			// Create a Starling instance that will run the "Game" class
-			_starling = new Starling(Game, stage);
+			_starling = new Starling(WeldTest, stage);
 			
 			_starling.showStats = true;
 			_starling.start();
